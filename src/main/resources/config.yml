@@ -1,0 +1,4 @@
+TP Player: "&bYou have been teleported to &c%argument%&b!"
+TP Admin: "<red><b>Attempting to teleport players to %argument%</b>!</red>"
+No arg provided: "&cNo argument provided!"
+No player found: "%argument% wasn't found online!"

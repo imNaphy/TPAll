@@ -1,0 +1,4 @@
+name: TPAll
+version: '${project.version}'
+main: xyz.naphy.tpall.TPAll
+api-version: '1.19'
