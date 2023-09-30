@@ -32,14 +32,12 @@ public class TPAllCommand extends BukkitCommand {
             sender.sendMessage(ChatColor.translateAlternateColorCodes('&', "&7[&4*&7] You don't have access to this command!"));
             return true;
         }
-        if (args.length != 1) {
-            sender.sendMessage(TPAll.generateMessage(TPAll.plugin.getConfig().getString("No arg provided")));
-            return true;
+        Player player;
+        if (args.length >= 1) {
+            player = Bukkit.getPlayer(args[0]);
         }
-        Player player = Bukkit.getPlayer(args[0]);
-        if (player == null) {
-            sender.sendMessage(TPAll.generateMessage(TPAll.plugin.getConfig().getString("No player found").replace("%argument%", args[0])));
-            return true;
+        else {
+            player = (Player) sender;
         }
         Location loc = player.getLocation();
         List<Player> players = new ArrayList<>(Bukkit.getOnlinePlayers());
